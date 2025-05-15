@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farming Guides - AgriConnect</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="https://cdn-icons-png.flaticon.com/512/628/628324.png" alt="AgriConnect Logo">
+            <h1>AgriConnect</h1>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="marketplace.html">Marketplace</a>
+            <a href="farming-guides.html">Farming Guides</a>
+            <a href="discussion-forums.html">Discussion Forums</a>
+            <a href="articles.html">Research Articles</a>
+            <a href="video-tutorials.html">Video Tutorials</a>
+            <a href="chatbot.html">AI Chatbot</a>
+        </div>
+        <div class="nav-buttons">
+            <button class="cart-btn">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </button>
+            <button class="login-btn">Login</button>
+        </div>
+    </nav>
+
+    <!-- Guides Header -->
+    <header class="guides-header">
+        <div class="header-content">
+            <h1>Farming Guides</h1>
+            <p>Comprehensive guides for modern farming techniques and best practices</p>
+            <div class="search-container">
+                <input type="text" placeholder="Search guides...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="guides-content">
+        <!-- Sidebar -->
+        <aside class="guides-sidebar">
+            <!-- Categories -->
+            <div class="sidebar-section">
+                <h3>Categories</h3>
+                <ul class="category-list">
+                    <li class="active"><i class="fas fa-th-large"></i> All Guides</li>
+                    <li><i class="fas fa-seedling"></i> Crop Management</li>
+                    <li><i class="fas fa-water"></i> Irrigation</li>
+                    <li><i class="fas fa-bug"></i> Pest Control</li>
+                    <li><i class="fas fa-leaf"></i> Organic Farming</li>
+                    <li><i class="fas fa-cloud-sun"></i> Weather & Planning</li>
+                </ul>
+            </div>
+
+            <!-- Difficulty Filter -->
+            <div class="sidebar-section">
+                <h3>Difficulty Level</h3>
+                <div class="difficulty-filters">
+                    <label class="difficulty-label">
+                        <input type="checkbox" checked>
+                        <span class="beginner">Beginner</span>
+                    </label>
+                    <label class="difficulty-label">
+                        <input type="checkbox" checked>
+                        <span class="intermediate">Intermediate</span>
+                    </label>
+                    <label class="difficulty-label">
+                        <input type="checkbox" checked>
+                        <span class="advanced">Advanced</span>
+                    </label>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Guides Grid -->
+        <div class="guides-grid">
+            <!-- Guide Card 1 -->
+            <div class="guide-card">
+                <div class="guide-image">
+                    <img src="assets/guides/organic-farming.jpg" alt="Organic Farming">
+                    <span class="difficulty beginner">Beginner</span>
+                </div>
+                <div class="guide-info">
+                    <h3>Introduction to Organic Farming</h3>
+                    <p>Learn the basics of organic farming methods and sustainable agriculture practices.</p>
+                    <div class="guide-meta">
+                        <span><i class="far fa-clock"></i> 15 min read</span>
+                        <span><i class="far fa-eye"></i> 1.2K views</span>
+                    </div>
+                    <button class="read-guide">Read Guide</button>
+                </div>
+            </div>
+
+            <!-- Guide Card 2 -->
+            <div class="guide-card">
+                <div class="guide-image">
+                    <img src="assets/guides/irrigation.jpg" alt="Irrigation Systems">
+                    <span class="difficulty intermediate">Intermediate</span>
+                </div>
+                <div class="guide-info">
+                    <h3>Modern Irrigation Techniques</h3>
+                    <p>Explore efficient irrigation systems and water management strategies.</p>
+                    <div class="guide-meta">
+                        <span><i class="far fa-clock"></i> 20 min read</span>
+                        <span><i class="far fa-eye"></i> 856 views</span>
+                    </div>
+                    <button class="read-guide">Read Guide</button>
+                </div>
+            </div>
+
+            <!-- Guide Card 3 -->
+            <div class="guide-card">
+                <div class="guide-image">
+                    <img src="assets/guides/pest-control.jpg" alt="Pest Control">
+                    <span class="difficulty advanced">Advanced</span>
+                </div>
+                <div class="guide-info">
+                    <h3>Integrated Pest Management</h3>
+                    <p>Advanced strategies for controlling pests while maintaining ecological balance.</p>
+                    <div class="guide-meta">
+                        <span><i class="far fa-clock"></i> 25 min read</span>
+                        <span><i class="far fa-eye"></i> 2.1K views</span>
+                    </div>
+                    <button class="read-guide">Read Guide</button>
+                </div>
+            </div>
+
+            <!-- Guide Card 4 -->
+            <div class="guide-card">
+                <div class="guide-image">
+                    <img src="assets/guides/soil-health.jpg" alt="Soil Management">
+                    <span class="difficulty intermediate">Intermediate</span>
+                </div>
+                <div class="guide-info">
+                    <h3>Soil Health Management</h3>
+                    <p>Learn how to maintain and improve soil fertility for better crop yields.</p>
+                    <div class="guide-meta">
+                        <span><i class="far fa-clock"></i> 18 min read</span>
+                        <span><i class="far fa-eye"></i> 1.5K views</span>
+                    </div>
+                    <button class="read-guide">Read Guide</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Add this modal section at the end of the body, before the scripts -->
+    <div class="guide-modal" id="guideModal">
+        <div class="guide-modal-content">
+            <div class="guide-modal-header">
+                <div class="modal-title">
+                    <h2>Introduction to Organic Farming</h2>
+                    <div class="guide-badges">
+                        <span class="difficulty beginner">Beginner</span>
+                        <span class="read-time"><i class="far fa-clock"></i> 15 min read</span>
+                    </div>
+                </div>
+                <button class="close-modal" id="closeGuide">&times;</button>
+            </div>
+
+            <div class="guide-modal-body">
+                <!-- Table of Contents -->
+                <div class="guide-sidebar">
+                    <div class="toc-header">
+                        <h3>Contents</h3>
+                    </div>
+                    <ul class="toc-list">
+                        <li class="active"><a href="#introduction">Introduction</a></li>
+                        <li><a href="#basics">Basics of Organic Farming</a></li>
+                        <li><a href="#soil">Soil Management</a></li>
+                        <li><a href="#pest">Natural Pest Control</a></li>
+                        <li><a href="#certification">Organic Certification</a></li>
+                    </ul>
+                </div>
+
+                <!-- Guide Content -->
+                <div class="guide-content">
+                    <section id="introduction">
+                        <h2>Introduction</h2>
+                        <img src="assets/guides/organic-intro.jpg" alt="Organic Farming Introduction">
+                        <p>Organic farming is a method of crop and livestock production that involves much more than choosing not to use pesticides, fertilizers, genetically modified organisms, antibiotics, and growth hormones.</p>
+                        <p>This comprehensive guide will walk you through the fundamental principles and practices of organic farming, helping you understand how to transition to and maintain a successful organic farming operation.</p>
+                    </section>
+
+                    <section id="basics">
+                        <h2>Basics of Organic Farming</h2>
+                        <div class="key-points">
+                            <div class="point">
+                                <i class="fas fa-seedling"></i>
+                                <h4>Natural Processes</h4>
+                                <p>Work with natural systems and cycles</p>
+                            </div>
+                            <div class="point">
+                                <i class="fas fa-ban"></i>
+                                <h4>No Chemicals</h4>
+                                <p>Avoid synthetic pesticides and fertilizers</p>
+                            </div>
+                            <div class="point">
+                                <i class="fas fa-sync"></i>
+                                <h4>Sustainability</h4>
+                                <p>Maintain ecological balance</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="soil">
+                        <h2>Soil Management</h2>
+                        <img src="assets/guides/soil-health.jpg" alt="Soil Management">
+                        <p>Healthy soil is the foundation of organic farming. Learn about:</p>
+                        <ul>
+                            <li>Composting techniques</li>
+                            <li>Crop rotation strategies</li>
+                            <li>Natural fertilizers</li>
+                            <li>Soil testing methods</li>
+                        </ul>
+                    </section>
+
+                    <section id="pest">
+                        <h2>Natural Pest Control</h2>
+                        <div class="info-box">
+                            <h4>Key Methods:</h4>
+                            <ul>
+                                <li>Biological control</li>
+                                <li>Companion planting</li>
+                                <li>Physical barriers</li>
+                                <li>Natural repellents</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section id="certification">
+                        <h2>Organic Certification</h2>
+                        <div class="certification-steps">
+                            <div class="step">
+                                <span class="step-number">1</span>
+                                <h4>Farm Plan</h4>
+                                <p>Develop organic system plan</p>
+                            </div>
+                            <div class="step">
+                                <span class="step-number">2</span>
+                                <h4>Implementation</h4>
+                                <p>Follow organic practices</p>
+                            </div>
+                            <div class="step">
+                                <span class="step-number">3</span>
+                                <h4>Inspection</h4>
+                                <p>On-site verification</p>
+                            </div>
+                            <div class="step">
+                                <span class="step-number">4</span>
+                                <h4>Certification</h4>
+                                <p>Receive organic certificate</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="guides.js"></script>
+</body>
+</html> 

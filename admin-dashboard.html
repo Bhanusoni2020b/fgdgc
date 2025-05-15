@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriConnect - Admin Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="admin-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        /* Additional styles specific to this page */
+        .dashboard-section {
+            display: none;
+        }
+        
+        .dashboard-section.active {
+            display: block;
+        }
+        
+        .logout-btn {
+            background: var(--danger);
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            transition: background-color 0.3s;
+        }
+        
+        .logout-btn:hover {
+            background: #c0392b;
+        }
+    </style>
+</head>
+<body>
+    <div class="admin-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h2>AgriConnect</h2>
+                <p>Admin Panel</p>
+            </div>
+            <div class="sidebar-menu">
+                <div class="menu-item active" data-section="dashboard">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
+                </div>
+                <div class="menu-item" data-section="inquiries">
+                    <i class="fas fa-question-circle"></i>
+                    <span>User Inquiries</span>
+                </div>
+                <div class="menu-item" data-section="users">
+                    <i class="fas fa-users"></i>
+                    <span>Manage Users</span>
+                </div>
+                <div class="menu-item" data-section="content">
+                    <i class="fas fa-file-alt"></i>
+                    <span>Content Management</span>
+                </div>
+                <div class="menu-item" data-section="settings">
+                    <i class="fas fa-cog"></i>
+                    <span>Settings</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="header">
+                <h1>Admin Dashboard</h1>
+                <button class="logout-btn" id="logoutBtn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    Logout
+                </button>
+            </div>
+
+            <!-- Dashboard Overview -->
+            <div id="dashboardSection" class="dashboard-section active">
+                <div class="dashboard-cards">
+                    <div class="card">
+                        <h3>Total Users</h3>
+                        <div class="value">1,254</div>
+                        <p><span class="positive-change">+12%</span> from last month</p>
+                    </div>
+                    <div class="card">
+                        <h3>Active Sessions</h3>
+                        <div class="value">247</div>
+                        <p><span class="positive-change">+8%</span> from yesterday</p>
+                    </div>
+                    <div class="card">
+                        <h3>Pending Inquiries</h3>
+                        <div class="value">18</div>
+                        <p><span class="negative-change">3 new</span> today</p>
+                    </div>
+                    <div class="card">
+                        <h3>Total Revenue</h3>
+                        <div class="value">$12,450</div>
+                        <p><span class="positive-change">+24%</span> from last month</p>
+                    </div>
+                </div>
+
+                <div class="recent-activity">
+                    <h2>Recent Activity</h2>
+                    <div class="activity-list">
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="activity-details">
+                                <h4>New user registration</h4>
+                                <p>John Doe registered as a new farmer</p>
+                                <span class="activity-time">10 minutes ago</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon warning">
+                                <i class="fas fa-question"></i>
+                            </div>
+                            <div class="activity-details">
+                                <h4>New inquiry received</h4>
+                                <p>Question about organic farming practices</p>
+                                <span class="activity-time">25 minutes ago</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon success">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                            <div class="activity-details">
+                                <h4>New order placed</h4>
+                                <p>Order #4567 - Organic Seeds Collection</p>
+                                <span class="activity-time">1 hour ago</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dashboard Sections -->
+            <div id="inquiriesSection" class="dashboard-section">
+                <h2>User Inquiries</h2>
+                <p>Manage and respond to user questions and feedback.</p>
+                <!-- Inquiries content will be loaded here -->
+            </div>
+
+            <div id="usersSection" class="dashboard-section">
+                <h2>Manage Users</h2>
+                <p>View and manage user accounts and permissions.</p>
+                <!-- Users content will be loaded here -->
+            </div>
+
+            <div id="contentSection" class="dashboard-section">
+                <h2>Content Management</h2>
+                <p>Manage website content, articles, and resources.</p>
+                <!-- Content management will be loaded here -->
+            </div>
+
+            <div id="settingsSection" class="dashboard-section">
+                <h2>Settings</h2>
+                <p>Configure system settings and preferences.</p>
+                <!-- Settings content will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>

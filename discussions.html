@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discussion Forum - Agricultural Management</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-logo">
+            <img src="assets/logo.png" alt="Logo">
+            <span>AgriTech Hub</span>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Discussion Forum Section -->
+    <div class="forum-page">
+        <!-- Forum Header -->
+        <div class="forum-header">
+            <h1>Discussion Forum</h1>
+            <p>Join the conversation with fellow farmers and agricultural experts</p>
+            <button class="new-topic-btn"><i class="fas fa-plus"></i> Start New Discussion</button>
+        </div>
+
+        <!-- Forum Content -->
+        <div class="forum-content">
+            <!-- Forum Categories -->
+            <div class="forum-sidebar">
+                <div class="search-box">
+                    <input type="text" placeholder="Search discussions...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+
+                <div class="category-section">
+                    <h3>Categories</h3>
+                    <ul class="forum-categories">
+                        <li class="active"><i class="fas fa-th-large"></i> All Topics</li>
+                        <li><i class="fas fa-seedling"></i> Crop Management</li>
+                        <li><i class="fas fa-bug"></i> Pest Control</li>
+                        <li><i class="fas fa-tint"></i> Irrigation</li>
+                        <li><i class="fas fa-leaf"></i> Organic Farming</li>
+                        <li><i class="fas fa-tools"></i> Equipment</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Discussion List -->
+            <div class="discussion-list">
+                <!-- Discussion Card 1 -->
+                <div class="discussion-card">
+                    <div class="discussion-stats">
+                        <div class="stat">
+                            <span class="number">15</span>
+                            <span class="label">Replies</span>
+                        </div>
+                        <div class="stat">
+                            <span class="number">234</span>
+                            <span class="label">Views</span>
+                        </div>
+                    </div>
+                    <div class="discussion-content">
+                        <h3>Best practices for organic pest control in tomatoes</h3>
+                        <p>I'm having issues with pests in my tomato garden. Looking for organic solutions...</p>
+                        <div class="discussion-meta">
+                            <span class="category">Organic Farming</span>
+                            <span class="author"><i class="fas fa-user"></i> John Doe</span>
+                            <span class="time"><i class="far fa-clock"></i> 2 hours ago</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Discussion Card 2 -->
+                <div class="discussion-card">
+                    <div class="discussion-stats">
+                        <div class="stat">
+                            <span class="number">8</span>
+                            <span class="label">Replies</span>
+                        </div>
+                        <div class="stat">
+                            <span class="number">156</span>
+                            <span class="label">Views</span>
+                        </div>
+                    </div>
+                    <div class="discussion-content">
+                        <h3>Drip irrigation system setup guide needed</h3>
+                        <p>Planning to install a drip irrigation system. Need advice on setup and maintenance...</p>
+                        <div class="discussion-meta">
+                            <span class="category">Irrigation</span>
+                            <span class="author"><i class="fas fa-user"></i> Sarah Smith</span>
+                            <span class="time"><i class="far fa-clock"></i> 1 day ago</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="discussions.js"></script>
+</body>
+</html> 

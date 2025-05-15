@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriConnect Marketplace</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="https://cdn-icons-png.flaticon.com/512/628/628324.png" alt="AgriConnect Logo">
+            <h1>AgriConnect</h1>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="marketplace.html">Marketplace</a>
+            <a href="farming-guides.html">Farming Guides</a>
+            <a href="discussion-forums.html">Discussion Forums</a>
+            <a href="articles.html">Research Articles</a>
+            <a href="video-tutorials.html">Video Tutorials</a>
+            <a href="chatbot.html">AI Chatbot</a>
+        </div>
+        <div class="nav-buttons">
+            <button class="cart-btn">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </button>
+            <button class="login-btn">Login</button>
+        </div>
+    </nav>
+
+    <!-- Marketplace Header -->
+    <header class="marketplace-header">
+        <div class="header-content">
+            <h1>Agricultural Marketplace</h1>
+            <div class="search-container">
+                <input type="text" placeholder="Search products, seeds, equipment...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <div class="filter-tags">
+                <button class="filter-tag active">All Products</button>
+                <button class="filter-tag">Seeds</button>
+                <button class="filter-tag">Equipment</button>
+                <button class="filter-tag">Fertilizers</button>
+                <button class="filter-tag">Pesticides</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Marketplace Content -->
+    <main class="marketplace-content">
+        <!-- Filters Sidebar -->
+        <aside class="filters-sidebar">
+            <div class="filter-section">
+                <h3>Categories</h3>
+                <div class="filter-options">
+                    <label><input type="checkbox" checked> Seeds & Plants</label>
+                    <label><input type="checkbox"> Farm Equipment</label>
+                    <label><input type="checkbox"> Fertilizers</label>
+                    <label><input type="checkbox"> Pesticides</label>
+                    <label><input type="checkbox"> Tools</label>
+                    <label><input type="checkbox"> Irrigation</label>
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <h3>Price Range</h3>
+                <div class="price-range">
+                    <input type="range" min="0" max="10000" value="5000">
+                    <div class="price-inputs">
+                        <input type="number" placeholder="Min" value="0">
+                        <span>to</span>
+                        <input type="number" placeholder="Max" value="10000">
+                    </div>
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <h3>Rating</h3>
+                <div class="filter-options">
+                    <label><input type="checkbox"> ⭐⭐⭐⭐⭐ (5)</label>
+                    <label><input type="checkbox"> ⭐⭐⭐⭐ (4+)</label>
+                    <label><input type="checkbox"> ⭐⭐⭐ (3+)</label>
+                </div>
+            </div>
+
+            <button class="apply-filters">Apply Filters</button>
+        </aside>
+
+        <!-- Products Grid -->
+        <div class="products-grid">
+            <!-- Product Card 1 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="assets/products/seeds.jpg" alt="Organic Seeds">
+                    <span class="product-tag">Best Seller</span>
+                </div>
+                <div class="product-info">
+                    <h3>Organic Wheat Seeds</h3>
+                    <div class="product-rating">
+                        <span class="stars">⭐⭐⭐⭐⭐</span>
+                        <span class="rating-count">(128)</span>
+                    </div>
+                    <p class="product-description">High-quality organic wheat seeds for better yield</p>
+                    <div class="product-price">
+                        <span class="price">₹1,200</span>
+                        <span class="unit">/ kg</span>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product Card 2 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="assets/products/tractor.jpg" alt="Modern Tractor">
+                    <span class="product-tag">New</span>
+                </div>
+                <div class="product-info">
+                    <h3>Modern Farming Tractor</h3>
+                    <div class="product-rating">
+                        <span class="stars">⭐⭐⭐⭐</span>
+                        <span class="rating-count">(85)</span>
+                    </div>
+                    <p class="product-description">Advanced tractor with modern features</p>
+                    <div class="product-price">
+                        <span class="price">₹8,50,000</span>
+                        <span class="unit">/ unit</span>
+                    </div>
+                    <button class="add-to-cart">Contact Seller</button>
+                </div>
+            </div>
+
+            <!-- Product Card 3 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="assets/products/fertilizer.jpg" alt="Organic Fertilizer">
+                    <span class="product-tag">Organic</span>
+                </div>
+                <div class="product-info">
+                    <h3>Natural Fertilizer</h3>
+                    <div class="product-rating">
+                        <span class="stars">⭐⭐⭐⭐⭐</span>
+                        <span class="rating-count">(246)</span>
+                    </div>
+                    <p class="product-description">100% organic fertilizer for healthy crops</p>
+                    <div class="product-price">
+                        <span class="price">₹500</span>
+                        <span class="unit">/ bag</span>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Add more product cards as needed -->
+        </div>
+    </main>
+
+    <!-- Floating Chat Widget -->
+    <div class="chat-widget">
+        <!-- ... (keep your existing chat widget code) ... -->
+    </div>
+
+    <script src="marketplace.js"></script>
+</body>
+</html> 

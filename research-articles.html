@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Articles - AgriConnect</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-logo">
+            <img src="assets/logo.png" alt="Logo">
+            <span>AgriConnect</span>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Research Articles Header -->
+    <header class="research-header">
+        <div class="header-content">
+            <h1>Research Articles</h1>
+            <p>Explore the latest agricultural research and scientific findings</p>
+            <div class="search-container">
+                <input type="text" placeholder="Search articles...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="research-content">
+        <!-- Filters Section -->
+        <aside class="research-sidebar">
+            <div class="filter-section">
+                <h3>Categories</h3>
+                <div class="category-filters">
+                    <label class="filter-option active">
+                        <input type="radio" name="category" value="all" checked>
+                        <span>All Articles</span>
+                        <span class="count">24</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="radio" name="category" value="sustainable">
+                        <span>Sustainable Farming</span>
+                        <span class="count">8</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="radio" name="category" value="innovation">
+                        <span>Agricultural Innovation</span>
+                        <span class="count">6</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="radio" name="category" value="climate">
+                        <span>Climate Impact</span>
+                        <span class="count">5</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="radio" name="category" value="technology">
+                        <span>Agri-Technology</span>
+                        <span class="count">5</span>
+                    </label>
+                </div>
+
+                <h3>Publication Year</h3>
+                <div class="year-filters">
+                    <label class="filter-option">
+                        <input type="checkbox" value="2024">
+                        <span>2024</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" value="2023">
+                        <span>2023</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" value="2022">
+                        <span>2022</span>
+                    </label>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Articles Grid -->
+        <div class="articles-container">
+            <!-- Featured Article -->
+            <article class="featured-article">
+                <div class="article-image">
+                    <img src="assets/articles/featured.jpg" alt="Featured Article">
+                    <div class="article-category">Sustainable Farming</div>
+                </div>
+                <div class="article-content">
+                    <h2>Impact of Sustainable Farming Practices on Soil Health</h2>
+                    <p class="article-excerpt">
+                        A comprehensive study on how sustainable farming practices contribute to long-term soil health and agricultural productivity.
+                    </p>
+                    <div class="article-meta">
+                        <div class="author-info">
+                            <img src="assets/authors/author1.jpg" alt="Author">
+                            <span>Dr. Sarah Johnson</span>
+                        </div>
+                        <div class="article-stats">
+                            <span><i class="far fa-calendar"></i> Mar 15, 2024</span>
+                            <span><i class="far fa-clock"></i> 15 min read</span>
+                        </div>
+                    </div>
+                    <button class="read-more">Read Full Article</button>
+                </div>
+            </article>
+
+            <!-- Articles Grid -->
+            <div class="articles-grid">
+                <!-- Article Card 1 -->
+                <article class="article-card">
+                    <div class="article-image">
+                        <img src="assets/articles/article1.jpg" alt="Article 1">
+                        <div class="article-category">Agricultural Innovation</div>
+                    </div>
+                    <div class="article-content">
+                        <h3>Smart Irrigation Systems: A Game Changer</h3>
+                        <p class="article-excerpt">
+                            Exploring how smart irrigation technology is revolutionizing water management in agriculture.
+                        </p>
+                        <div class="article-meta">
+                            <div class="author-info">
+                                <img src="assets/authors/author2.jpg" alt="Author">
+                                <span>Dr. Michael Chen</span>
+                            </div>
+                            <span class="read-time"><i class="far fa-clock"></i> 8 min read</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article Card 2 -->
+                <article class="article-card">
+                    <div class="article-image">
+                        <img src="assets/articles/article2.jpg" alt="Article 2">
+                        <div class="article-category">Climate Impact</div>
+                    </div>
+                    <div class="article-content">
+                        <h3>Climate-Resilient Crop Varieties</h3>
+                        <p class="article-excerpt">
+                            Research findings on developing crop varieties that can withstand changing climate conditions.
+                        </p>
+                        <div class="article-meta">
+                            <div class="author-info">
+                                <img src="assets/authors/author3.jpg" alt="Author">
+                                <span>Dr. Emily Rodriguez</span>
+                            </div>
+                            <span class="read-time"><i class="far fa-clock"></i> 10 min read</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Add more article cards as needed -->
+            </div>
+        </div>
+    </main>
+
+    <script src="articles.js"></script>
+</body>
+</html> 

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chatbot - Agricultural Assistant</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-logo">
+            <img src="assets/logo.png" alt="Logo">
+            <span>AgriTech Hub</span>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Chatbot Interface -->
+    <div class="chatbot-container">
+        <!-- Chatbot Header -->
+        <div class="chatbot-header">
+            <div class="chatbot-info">
+                <img src="assets/bot-avatar.png" alt="AI Assistant" class="bot-avatar">
+                <div class="bot-status">
+                    <h2>AgriBot Assistant</h2>
+                    <span class="status-indicator">Online</span>
+                </div>
+            </div>
+            <div class="header-actions">
+                <button class="clear-chat"><i class="fas fa-broom"></i></button>
+            </div>
+        </div>
+
+        <!-- Chat Messages Area -->
+        <div class="chat-messages" id="chatMessages">
+            <!-- Welcome Message -->
+            <div class="message bot-message">
+                <img src="assets/bot-avatar.png" alt="Bot" class="message-avatar">
+                <div class="message-content">
+                    <p>Hello! I'm your agricultural assistant. I can help you with:</p>
+                    <ul class="bot-capabilities">
+                        <li>Crop disease identification</li>
+                        <li>Farming best practices</li>
+                        <li>Weather-based recommendations</li>
+                        <li>Soil health guidance</li>
+                        <li>Pest control solutions</li>
+                    </ul>
+                    <p>How can I assist you today?</p>
+                </div>
+            </div>
+
+            <!-- Quick Action Buttons -->
+            <div class="quick-actions">
+                <button class="action-btn">Identify Disease</button>
+                <button class="action-btn">Crop Schedule</button>
+                <button class="action-btn">Pest Control</button>
+                <button class="action-btn">Weather Tips</button>
+            </div>
+        </div>
+
+        <!-- Chat Input Area -->
+        <div class="chat-input-area">
+            <div class="input-wrapper">
+                <button class="attachment-btn">
+                    <i class="fas fa-paperclip"></i>
+                </button>
+                <input type="text" id="userInput" placeholder="Type your question here...">
+                <button class="voice-btn">
+                    <i class="fas fa-microphone"></i>
+                </button>
+                <button class="send-btn">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+            <div class="input-suggestions">
+                <span class="suggestion-chip">How to prevent pest attack?</span>
+                <span class="suggestion-chip">Best time to sow wheat</span>
+                <span class="suggestion-chip">Organic fertilizers</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="chatbot.js"></script>
+</body>
+</html> 

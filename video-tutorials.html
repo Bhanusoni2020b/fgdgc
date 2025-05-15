@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Tutorials - AgriConnect</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-logo">
+            <img src="assets/logo.png" alt="Logo">
+            <span>AgriConnect</span>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Video Tutorials Header -->
+    <header class="video-header">
+        <div class="header-content">
+            <h1>Video Tutorials</h1>
+            <p>Learn farming techniques through expert-led video guides</p>
+            <div class="search-container">
+                <input type="text" placeholder="Search videos...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="video-content">
+        <!-- Sidebar -->
+        <aside class="video-sidebar">
+            <!-- Categories -->
+            <div class="sidebar-section">
+                <h3>Categories</h3>
+                <ul class="video-categories">
+                    <li class="active" data-category="all">
+                        <i class="fas fa-th-large"></i>
+                        <span>All Videos</span>
+                        <span class="count">24</span>
+                    </li>
+                    <li data-category="organic">
+                        <i class="fas fa-seedling"></i>
+                        <span>Organic Farming</span>
+                        <span class="count">8</span>
+                    </li>
+                    <li data-category="soil">
+                        <i class="fas fa-mountain"></i>
+                        <span>Soil Management</span>
+                        <span class="count">6</span>
+                    </li>
+                    <li data-category="pest">
+                        <i class="fas fa-bug"></i>
+                        <span>Pest Control</span>
+                        <span class="count">5</span>
+                    </li>
+                    <li data-category="water">
+                        <i class="fas fa-tint"></i>
+                        <span>Water Management</span>
+                        <span class="count">3</span>
+                    </li>
+                    <li data-category="tech">
+                        <i class="fas fa-tractor"></i>
+                        <span>Modern Techniques</span>
+                        <span class="count">2</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Filters -->
+            <div class="sidebar-section">
+                <h3>Duration</h3>
+                <div class="duration-filters">
+                    <label class="duration-option">
+                        <input type="checkbox" value="short">
+                        <span>Short (< 5 min)</span>
+                    </label>
+                    <label class="duration-option">
+                        <input type="checkbox" value="medium">
+                        <span>Medium (5-15 min)</span>
+                    </label>
+                    <label class="duration-option">
+                        <input type="checkbox" value="long">
+                        <span>Long (> 15 min)</span>
+                    </label>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Video Grid -->
+        <div class="video-grid">
+            <!-- Featured Video -->
+            <div class="featured-video">
+                <div class="video-player" id="featuredPlayer">
+                    <img src="assets/videos/featured-thumbnail.jpg" alt="Featured Video">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                </div>
+                <div class="featured-info">
+                    <h2>Getting Started with Organic Farming</h2>
+                    <p>Learn the fundamental principles and practices of organic farming in this comprehensive guide.</p>
+                    <div class="video-meta">
+                        <span><i class="far fa-clock"></i> 15:30</span>
+                        <span><i class="far fa-eye"></i> 1.2K views</span>
+                        <span><i class="far fa-calendar"></i> 2 days ago</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video Cards -->
+            <div class="video-cards">
+                <!-- Video Card 1 -->
+                <div class="video-card" data-video-id="video1">
+                    <div class="thumbnail">
+                        <img src="assets/videos/soil-management.jpg" alt="Soil Management">
+                        <span class="duration">8:45</span>
+                        <button class="play-btn"><i class="fas fa-play"></i></button>
+                    </div>
+                    <div class="video-info">
+                        <h3>Soil Management Techniques</h3>
+                        <p>Essential techniques for maintaining healthy soil and improving fertility.</p>
+                        <div class="video-meta">
+                            <span class="category">Soil Management</span>
+                            <span><i class="far fa-eye"></i> 856 views</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Card 2 -->
+                <div class="video-card" data-video-id="video2">
+                    <div class="thumbnail">
+                        <img src="assets/videos/pest-control.jpg" alt="Pest Control">
+                        <span class="duration">12:20</span>
+                        <button class="play-btn"><i class="fas fa-play"></i></button>
+                    </div>
+                    <div class="video-info">
+                        <h3>Natural Pest Control Methods</h3>
+                        <p>Learn organic approaches to managing common crop pests.</p>
+                        <div class="video-meta">
+                            <span class="category">Pest Control</span>
+                            <span><i class="far fa-eye"></i> 1.1K views</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Card 3 -->
+                <div class="video-card" data-video-id="video3">
+                    <div class="thumbnail">
+                        <img src="assets/videos/water-management.jpg" alt="Water Management">
+                        <span class="duration">10:15</span>
+                        <button class="play-btn"><i class="fas fa-play"></i></button>
+                    </div>
+                    <div class="video-info">
+                        <h3>Efficient Irrigation Systems</h3>
+                        <p>Modern irrigation techniques for water conservation.</p>
+                        <div class="video-meta">
+                            <span class="category">Water Management</span>
+                            <span><i class="far fa-eye"></i> 723 views</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Video Modal -->
+    <div class="video-modal" id="videoModal">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <div class="video-container">
+                <iframe id="videoPlayer" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="modal-info">
+                <h2 id="modalTitle"></h2>
+                <p id="modalDescription"></p>
+                <div class="modal-meta">
+                    <span id="modalViews"></span>
+                    <span id="modalDate"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="videos.js"></script>
+</body>
+</html> 

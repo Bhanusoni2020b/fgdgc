@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriConnect - Weather</title>
+    <link rel="stylesheet" href="weather-widget-styles.css">
+        }
+    </style>
+</head>
+<body>
+    <div class="weather-widget">
+        <div class="weather-header">
+            <h2 class="location">Loading...</h2>
+            <div class="timestamp"></div>
+        </div>
+        
+        <div class="weather-main">
+            <div>
+                <div class="temperature">--°C</div>
+                <div class="weather-desc">--</div>
+            </div>
+            <img src="" alt="Weather icon" class="weather-icon" id="weatherIcon">
+        </div>
+        
+        <div class="weather-details">
+            <div class="detail-item">
+                <div class="detail-label">Feels Like</div>
+                <div class="detail-value" id="feelsLike">--°C</div>
+            </div>
+            <div class="detail-item">
+                <div class="detail-label">Humidity</div>
+                <div class="detail-value" id="humidity">--%</div>
+            </div>
+            <div class="detail-item">
+                <div class="detail-label">Wind</div>
+                <div class="detail-value" id="windSpeed">-- m/s</div>
+            </div>
+            <div class="detail-item">
+                <div class="detail-label">Condition</div>
+                <div class="detail-value" id="condition">--</div>
+            </div>
+        </div>
+        
+        <div class="advice" id="advice">
+            Loading agricultural advice...
+        </div>
+        
+        <button class="refresh-btn" id="refreshBtn">
+            Refresh Weather
+        </button>
+        
+        <div id="errorContainer" class="error hidden"></div>
+    </div>
+
+    <!-- Include the weather service -->
+    <script src="weather.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const locationElement = document.querySelector('.location');
+            const temperatureElement = document.querySelector('.temperature');
+            const weatherDescElement = document.querySelector('.weather-desc');
+            const weatherIconElement = document.getElementById('weatherIcon');
+            const feelsLikeElement = document.getElementById('feelsLike');
+            const humidityElement = document.getElementById('humidity');
+            const windSpeedElement = document.getElementById('windSpeed');
+            const conditionElement = document.getElementById('condition');
+            const adviceElement = document.getElementById('advice');
+            const timestampElement = document.querySelector('.timestamp');
+            const refreshBtn = document.getElementById('refreshBtn');
+            const errorContainer = document.getElementById('errorContainer');
+            
+            // Default coordinates (can be changed based on user's location)
+            let currentLat = 20.5937; // Default to India's coordinates
+            let currentLon = 78.9629;
+            
+            // Format date for display
+            function formatTime(date) {
+                return date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+            }
+            
+            // Update the UI with weather data
+            function updateWeatherUI(weatherData) {
+                if (weatherData.error) {
+                    showError(weatherData.error);
+                    return;
+                }
+                
+                locationElement.textContent = weatherData.location || 'Current Location';
+                temperatureElement.textContent = `${weatherData.temperature}°C`;
+                weatherDescElement.textContent = weatherData.description
+                    .split(' ')
+                    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+                    .join(' ');
+                weatherIconElement.src = weatherData.icon;
+                weatherIconElement.alt = weatherData.description;
+                feelsLikeElement.textContent = `${weatherData.feelsLike}°C`;
+                humidityElement.textContent = `${weatherData.humidity}%`;
+                windSpeedElement.textContent = `${weatherData.windSpeed} m/s`;
+                conditionElement.textContent = weatherData.condition.charAt(0).toUpperCase() + weatherData.condition.slice(1);
+                adviceElement.textContent = weatherData.advice;
+                timestampElement.textContent = `Updated: ${formatTime(new Date())}`;
+                
+                // Hide error if previously shown
+                errorContainer.classList.add('hidden');
+            }
+            
+            // Show error message
+            function showError(message) {
+                errorContainer.textContent = message;
+                errorContainer.classList.remove('hidden');
+            }
+            
+            // Get user's current location
+            function getLocation() {
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(
+                        (position) => {
+                            currentLat = position.coords.latitude;
+                            currentLon = position.coords.longitude;
+                            fetchWeather();
+                        },
+                        (error) => {
+                            console.error('Error getting location:', error);
+                            // Use default coordinates if location access is denied
+                            fetchWeather();
+                        }
+                    );
+                } else {
+                    console.log('Geolocation is not supported by this browser.');
+                    // Use default coordinates if geolocation is not supported
+                    fetchWeather();
+                }
+            }
+            
+            // Fetch weather data
+            async function fetchWeather() {
+                try {
+                    const weatherData = await weatherService.getWeatherByLocation(currentLat, currentLon);
+                    updateWeatherUI(weatherData);
+                } catch (error) {
+                    console.error('Error fetching weather:', error);
+                    showError('Failed to load weather data. Please try again later.');
+                }
+            }
+            
+            // Event listeners
+            refreshBtn.addEventListener('click', fetchWeather);
+            
+            // Initial load
+            getLocation();
+        });
+    </script>
+</body>
+</html>

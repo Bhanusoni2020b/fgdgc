@@ -1,0 +1,78 @@
+/* Weather Widget Styles */
+.weather-widget {
+    background: linear-gradient(135deg, #72b1d8 0%, #97d9e8 100%);
+    border-radius: 15px;
+    padding: 20px;
+    color: white;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 300px;
+    margin: 20px auto;
+}
+
+.weather-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.weather-location {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.weather-temp {
+    font-size: 3rem;
+    font-weight: 300;
+    margin: 15px 0;
+}
+
+.weather-details {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.weather-detail {
+    text-align: center;
+}
+
+.weather-detail i {
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+}
+
+.weather-detail span {
+    display: block;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.weather-description {
+    font-size: 1.1rem;
+    margin: 10px 0;
+    text-transform: capitalize;
+}
+
+.weather-updated {
+    font-size: 0.8rem;
+    opacity: 0.8;
+    text-align: right;
+    margin-top: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+.error {
+    color: #d32f2f;
+    background: #ffebee;
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
